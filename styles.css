@@ -1,0 +1,32 @@
+html, body {
+    min-height: 200px;
+    min-width: 200px;
+    font-family: Arial, serif;
+}
+
+#heart {
+    width: 150pt;
+    height: 150pt;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    user-select: none;
+}
+
+#heart svg {
+    fill: red;
+}
+
+#results {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.beat {
+    transform: scale(1.05);
+}
+
+#heartRateChart {
+    height: 200px;
+}

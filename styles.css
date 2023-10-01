@@ -27,6 +27,7 @@ html, body {
     transform: scale(1.05);
 }
 
-#heartRateChart {
-    height: 200px;
+#chartWrapper {
+    position: relative;
+    height: 400px;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heartbeat Monitor</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
 <body>
 <div id="heart" onclick="recordBeat(event)">
     <svg viewBox="0 0 32 29.6">
@@ -13,8 +13,10 @@
     </svg>
 </div>
 <div id="results"></div>
-<canvas id="heartRateChart"></canvas>
-<script src="script.js"></script>
+<div id="chartWrapper">
+    <canvas id="heartRateChart"></canvas>
+</div>
+<script src="script.js?v=2"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

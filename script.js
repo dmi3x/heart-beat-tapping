@@ -74,7 +74,7 @@ function createChart() {
             animation: false,
             responsive: true,
             maintainAspectRatio: true,
-            aspectRatio: 3,
+            aspectRatio: 1,
             scales: {
                 x: {
                     title: {

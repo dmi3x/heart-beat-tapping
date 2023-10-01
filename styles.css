@@ -2,6 +2,7 @@ html, body {
     min-height: 200px;
     min-width: 200px;
     font-family: Arial, serif;
+    user-select: none;
 }
 
 #heart {
@@ -10,7 +11,6 @@ html, body {
     margin: 20px auto;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
-    user-select: none;
 }
 
 #heart svg {

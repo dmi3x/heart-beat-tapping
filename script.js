@@ -73,7 +73,7 @@ function createChart() {
         options: {
             animation: false,
             responsive: true,
-            maintainAspectRatio: true,
+            maintainAspectRatio: false,
             aspectRatio: 1,
             scales: {
                 x: {

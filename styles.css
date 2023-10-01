@@ -11,6 +11,7 @@ html, body {
     margin: 20px auto;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #heart svg {

@@ -90,6 +90,11 @@ function createChart() {
                         text: 'ЧСС (уд/мин)'
                     }
                 }
+            },
+            plugins: {
+                legend: {
+                    onClick: null,
+                }
             }
         }
     });

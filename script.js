@@ -125,3 +125,5 @@ function updateChart() {
 
     heartRateChart.update();
 }
+
+createChart();

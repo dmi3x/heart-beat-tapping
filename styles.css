@@ -22,6 +22,7 @@ html, body {
     position: relative;
     text-align: center;
     margin: 0 auto;
+    min-height: 37px;
 }
 
 .beat {
@@ -31,4 +32,8 @@ html, body {
 #chartWrapper {
     position: relative;
     height: 400px;
+}
+
+.finalised {
+    color: #03802e;
 }

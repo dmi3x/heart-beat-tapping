@@ -3,7 +3,27 @@ let lastBeatTime = null;
 
 const maxRecordsLength = 150;
 
+let bitTimer;
+let heartRateChart = null;
+let isRecordingStopped = false;
+
+function stopRecording() {
+    lastBeatTime = null;
+    beats = [];
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.classList.add('finalised');
+    isRecordingStopped = true;
+}
+
+// function resetChart() {
+//     const resultsDiv = document.getElementById('results');
+//     resultsDiv.innerHTML = '';
+//     heartRateChart.destroy();
+//     heartRateChart = null;
+// }
+
 function recordBeat(event) {
+    if (isRecordingStopped) return;
     event.preventDefault();
     let heart = document.getElementById('heart');
     heart.classList.add('beat');
@@ -16,6 +36,9 @@ function recordBeat(event) {
     }
     lastBeatTime = currentTime;
 
+    if (bitTimer) clearTimeout(bitTimer);
+    bitTimer = setTimeout(stopRecording, 3000);
+
     updateResults();
 }
 
@@ -27,7 +50,7 @@ function updateResults() {
     let totalLastFive = lastFive.reduce((sum, beat) => sum + beat, 0);
     let averageLastFive = totalLastFive / lastFive.length;
 
-    let resultsDiv = document.getElementById('results');
+    const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
         Среднее за все время: <b>${averageAll.toFixed(0)}</b> уд/мин<br>
         Среднее за последние 5 ударов: <b>${averageLastFive.toFixed(0)}</b> уд/мин
@@ -35,8 +58,6 @@ function updateResults() {
 
     updateChart();
 }
-
-let heartRateChart = null;
 
 function createChart() {
     const ctx = document.getElementById('heartRateChart').getContext('2d');
